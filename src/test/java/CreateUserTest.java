@@ -14,7 +14,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
 public class CreateUserTest {
     Faker faker = new Faker(Locale.forLanguageTag("ru"));
-    User user = new User(faker.elderScrolls().creature().replaceAll(" ", "")+"_"+faker.animal().name().replaceAll(" ", "")+"@yandex.ru", faker.name().firstName(), "qwerty");;
+    User user = new User(faker.elderScrolls().creature().replaceAll(" ", "")+"_"+faker.animal().name().replaceAll(" ", "")+"@yandex.ru", faker.name().firstName(), "qwerty");
     String token;
     ValidatableResponse response;
     private final UserHttpClient userHttpClient = new UserHttpClient(Const.URL);

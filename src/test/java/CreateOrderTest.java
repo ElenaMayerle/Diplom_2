@@ -45,7 +45,7 @@ public class CreateOrderTest {
         list.add(dataIngredients.getData().get(4).get_id());
         order = new Order(list);
         response=orderHttpClient.createOrder(order);
-        response.assertThat().statusCode(200).and().body("success",equalTo(true)).and().body("name",notNullValue());;
+        response.assertThat().statusCode(200).and().body("success",equalTo(true)).and().body("name",notNullValue());
     }
     @Test
     @DisplayName("Попытка создания заказа без ингредиентов")

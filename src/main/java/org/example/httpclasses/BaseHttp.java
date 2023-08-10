@@ -22,8 +22,8 @@ abstract class BaseHttp {
     public ValidatableResponse doGetRequest(String url, String token){
         return given(baseRequest()).header("Authorization", token).get(url).then();
     }
-    public ValidatableResponse doDeleteRequest(String url, String token){
-        return given(baseRequest()).header("Authorization", token).delete(url).then();
+    public void doDeleteRequest(String url, String token){
+        given(baseRequest()).header("Authorization", token).delete(url).then();
     }
     public ValidatableResponse doPatchRequest(String url, String token, Object body){
         return given(baseRequest()).header("Authorization", token).body(body).patch(url).then();
